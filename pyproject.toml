@@ -10,6 +10,10 @@ packages = [{include = "socle_commun", from = "src"}]
 python = ">=3.10,<3.13"
 crewai = {extras = ["tools"], version = ">=0.119.0,<1.0.0"}
 PyGithub = ">=2.1.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.scripts]
+run = "socle_commun.main:run"
 
 [build-system]
 requires = ["poetry-core"]
