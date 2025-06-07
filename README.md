@@ -1,3 +1,51 @@
+# GitHub Organization Management with CrewAI
+
+This project uses CrewAI to manage GitHub organizations, projects, and repositories.
+
+## Installation
+
+1. Install Poetry (if not already installed):
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+2. Install dependencies:
+```bash
+poetry install
+```
+
+## Configuration
+
+Create a `.env` file in the root directory with the following variables:
+```
+CREWAI_ENTERPRISE_TOOLS_K=your-crewai-token
+GITHUB_ORGANIZATION=your-organization
+GITHUB_PROJECT_NAME=your-project
+```
+
+## Usage
+
+Run the project:
+```bash
+poetry run python -m socle_commun.main
+```
+
+## Project Structure
+
+- `src/socle_commun/`: Main package directory
+  - `crew.py`: CrewAI configuration
+  - `main.py`: Entry point
+  - `config/`: Configuration files
+    - `agents.yaml`: Agent configurations
+    - `tasks.yaml`: Task configurations
+
+## Requirements
+
+- Python >= 3.10
+- Poetry for dependency management
+- CrewAI Enterprise token
+- GitHub organization access
+
 # UntitledProject Crew
 
 Welcome to the UntitledProject Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
