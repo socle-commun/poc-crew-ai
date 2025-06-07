@@ -1,0 +1,6 @@
+---
+manage_github_projects:
+  description: Organize and manage GitHub projects to ensure timelines are met and tasks are properly assigned.
+  expected_output: A well-organized project board with timelines and task assignments for each project.
+  async_execution: false
+  agent: github_manager 
