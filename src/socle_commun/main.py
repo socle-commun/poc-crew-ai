@@ -13,15 +13,14 @@ def run():
         load_dotenv()
         
         # Verify required environment variables
-        required_vars = ["CREWAI_ENTERPRISE_TOOLS_K", "GITHUB_ORGANIZATION", "GITHUB_PROJECT_NAME"]
+        required_vars = ["CREWAI_ENTERPRISE_TOOLS_K", "GITHUB_ORGANIZATION"]
         missing_vars = [var for var in required_vars if not os.getenv(var)]
         
         if missing_vars:
             raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
         
         inputs = {
-            "organization": os.getenv("GITHUB_ORGANIZATION"),
-            "project_name": os.getenv("GITHUB_PROJECT_NAME")
+            "organization": os.getenv("GITHUB_ORGANIZATION")
         }
         
         crew = GitHubOrganizationCrew().crew()
